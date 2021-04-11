@@ -13,12 +13,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
  * Created by @author cliffordbechtel on Apr 11, 2021
  *
  */
-@ActiveProfiles("snake")
+@ActiveProfiles("kebab")
 @JsonTest
-public class BeerDtoSnakeTest extends BaseTest {
-	
+public class BeerDtoKebabTest extends BaseTest {
+
 	@Test
-	void testSnake() throws JsonProcessingException {
+	void testKebab() throws JsonProcessingException {
 		BeerDto dto = getDto();
 		
 		String json = objectMapper.writeValueAsString(dto);

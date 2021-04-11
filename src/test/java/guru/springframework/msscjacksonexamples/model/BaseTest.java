@@ -7,11 +7,18 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * Created by @author cliffordbechtel on Apr 11, 2021
  *
  */
 public class BaseTest {
+	
+	@Autowired
+	ObjectMapper objectMapper;
 	
 	BeerDto getDto() {
 		return BeerDto.builder()
