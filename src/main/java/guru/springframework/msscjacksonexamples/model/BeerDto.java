@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
@@ -37,7 +38,11 @@ public class BeerDto {
     @Positive
     private Long upc;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
+    
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     private OffsetDateTime createdDate;
+    
     private OffsetDateTime lastUpdatedDate;
 }
