@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -21,6 +24,7 @@ import java.util.UUID;
 @Builder
 public class BeerDto {
 
+	@JsonProperty("beerId")
     @Null
     private UUID id;
 
